@@ -1,0 +1,133 @@
+/* Full-page background */
+.login-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Exact gradient similar to MVC */
+  background: linear-gradient(135deg, #f3e8ff, #d9c2ff);
+}
+
+/* Decorative circles */
+.login-wrapper::before,
+.login-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top-left soft circle */
+.login-wrapper::before {
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  left: -140px;
+  background: radial-gradient(
+    circle,
+    rgba(128, 52, 175, 0.08)
+  );
+}
+
+/* Bottom-right soft circle */
+.login-wrapper::after {
+  width: 420px;
+  height: 420px;
+  bottom: -140px;
+  right: -140px;
+  background: radial-gradient(
+    circle,
+    rgba(158, 83, 204, 0.08)
+  );
+}
+
+/* Login card */
+.login-card {
+  position: relative;
+  width: 420px;
+   max-width: 90%;            /* Ensures responsiveness on smaller screens */
+  padding: 32px 36px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  z-index: 1;
+ 
+
+  /* Entrance Animation */
+  animation: fadeInUp 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Floating Effect on Hover */
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Logo */
+.logo {
+  width: 70px;
+  margin-bottom: 10px;
+  animation: zoomIn 0.8s ease-in-out;
+}
+
+/* Title */
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 5px;
+}
+
+/* Subtitle */
+.login-subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .login-card {
+    width: 380px;
+    padding: 28px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .login-card {
+    width: 95%;
+    padding: 24px;
+    border-radius: 14px;
+  }
+}
+
+/* Fade In + Slide Up Animation for login card */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

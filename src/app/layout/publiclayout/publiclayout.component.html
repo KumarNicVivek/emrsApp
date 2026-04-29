@@ -1,0 +1,221 @@
+<div class="fixed-header">
+
+  <!-- TOP STRIP -->
+  <div class="top-strip d-flex justify-content-end px-3">
+    <a routerLink="/login" class="me-3 text-white text-decoration-none fw-bold font-size-12">
+      <i class="bi bi-box-arrow-in-right me-1"></i> Login
+    </a>
+
+    <a href="#content" class="text-white text-decoration-none fw-bold font-size-12">
+      <i class="bi bi-skip-forward me-1"></i> Skip to Main
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="emrs-header py-3">
+    <div class="container-fluid">
+      <div class="row text-center align-items-center">
+
+        <div class="col-md-2">
+          <img src="assets/images/logo_emrs.jpg" class="header-logo">
+        </div>
+
+        <div class="col-md-8">
+          <div class="hindi-title">राष्ट्रीय आदिवासी छात्र शिक्षा समिति</div>
+          <div class="english-title">National Education Society for Tribal Students</div>
+          <div class="portal-title">NESTS-EMRS Recruitment Portal</div>
+          <div class="exam-title">EMRS Staff Selection Examination (ESSE)</div>
+        </div>
+
+        <div class="col-md-2">
+          <img src="assets/images/ashoka-emblem.png" class="header-logo">
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark " id="mainNavbar">
+  <div class="container-fluid">
+
+    <!-- MOBILE TOGGLE -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <ul class="navbar-nav w-100">
+
+        <!-- HOME -->
+        <li class="nav-item">
+          <a routerLink="/" 
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }"
+             class="nav-link">
+            <i class="bi bi-house-door-fill me-1"></i> Home
+          </a>
+        </li>
+
+        <!-- ABOUT -->
+        <li class="nav-item">
+          <a routerLink="/about"
+             routerLinkActive="active"
+             class="nav-link">
+            About Us
+          </a>
+        </li>
+
+        <!-- ESSE 2023 -->
+        <li class="nav-item">
+          <a routerLink="/esse-2023"
+             routerLinkActive="active"
+             class="nav-link">
+            ESSE - 2023
+          </a>
+        </li>
+
+        <!-- ESSE 2025 DROPDOWN -->
+        <li class="nav-item dropdown-hover">
+          <a class="nav-link">
+            ESSE 2025
+            <span class="badge-new ms-1">NEW</span>
+          </a>
+
+          <ul class="submenu">
+            <li>
+              <a routerLink="/esse2025/notification"
+                 routerLinkActive="active">
+                Notification <span class="badge-new">NEW</span>
+              </a>
+            </li>
+
+            <li>
+              <a routerLink="/esse2025/syllabus"
+                 routerLinkActive="active">
+                Syllabus
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- CONTACT -->
+        <li class="nav-item">
+          <a routerLink="/contact"
+             routerLinkActive="active"
+             class="nav-link">
+            Contact Details
+          </a>
+        </li>
+
+        <!-- APPOINTMENT -->
+        <li class="nav-item">
+          <a routerLink="/appointment"
+             routerLinkActive="active"
+             class="nav-link">
+            Appointment Letter
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+<!-- ROUTER CONTENT -->
+<main id="content" class="pt-1">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- FOOTER -->
+<!-- IMPORTANT LINKS SECTION -->
+<div class="w-100 implinkParDiv">
+
+  <section class="important-links py-2 w-100">
+    <div class="container text-center">
+      <div class="row justify-content-center align-items-center">
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://nests.tribal.gov.in/" target="_blank" title="NESTS Website">
+            <img src="assets/images/logo_emrs.jpg" class="img-fluid nests-logo" alt="NESTS Website">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://www.mygov.in" target="_blank" title="MyGov India">
+            <img src="assets/images/mygov.png" class="img-fluid" alt="MyGov India">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://www.india.gov.in" target="_blank" title="National Portal of India">
+            <img src="assets/images/india-gov.png" class="img-fluid" alt="India Gov">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://tribal.gov.in/" target="_blank" title="Ministry of Tribal Affairs">
+            <img src="assets/images/tribalemblem.jpg" class="img-fluid" alt="Ministry">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://www.digitalindia.gov.in" target="_blank" title="Digital India">
+            <img src="assets/images/digital-india.png" class="img-fluid" alt="Digital India">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 logo-link">
+          <a href="https://www.makeinindia.com" target="_blank" title="Make in India">
+            <img src="assets/images/1730802314-makiinindia.png" class="img-fluid" alt="Make in India">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer text-muted p-0">
+
+  <!-- NAV LINKS -->
+  <div class="footer-nav bg-secondary py-2 text-white text-center">
+    <a routerLink="/disclaimer" class="text-white text-decoration-none">Disclaimer</a> |
+    <a routerLink="/privacy" class="text-white text-decoration-none">Privacy Policy</a> |
+    <a routerLink="/help" class="text-white text-decoration-none">Help</a>
+  </div>
+
+  <!-- INFO -->
+  <div class="footer-info py-3">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+
+        <!-- LEFT -->
+        <div class="col-md-8 mb-2 mb-md-0">
+          <p class="mb-1 fs-6">
+            Website Content Owned by
+            <strong>National Education Society for Tribal Students</strong><br />
+            Designed, Developed and Hosted by
+            <strong>National Informatics Centre (NIC)</strong>
+          </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-md-4 text-md-end text-center">
+          Visitor Count:
+          <strong class="bg-black text-white px-2 rounded">
+            {{ totalVisitors }}
+          </strong>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>

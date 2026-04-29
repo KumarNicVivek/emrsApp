@@ -1,0 +1,177 @@
+<section class="about-nests">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT -->
+      <div class="col-lg-7">
+        <span class="badge-about">ABOUT US</span>
+
+        <h2 class="about-title">
+          National Education Society for Tribal Students (NESTS)
+        </h2>
+
+        <p class="about-text">
+          NESTS has been established with an objective to impart quality
+          education to Scheduled Tribe (ST) children through establishment
+          of Eklavya Model Residential Schools (EMRS). EMRSs provide free
+          education to ST children from Class VI to XII in a residential setup.
+        </p>
+
+        <a routerLink="/about-us" class="btn btn-learn">
+          Learn More
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-5">
+        <div class="row g-4">
+
+          <div class="col-6">
+            <div class="minister-card">
+              <img src="assets/images/1718103845_ministerNat.jpeg">
+              <h6>Shri Jual Oram</h6>
+              <span>Hon’ble Minister</span>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="minister-card">
+              <img src="assets/images/1718104075-stateminister.jpg">
+              <h6>Shri Durga Das Uikey</h6>
+              <span>Hon’ble Minister of State</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS -->
+<section class="py-4 statistics-section">
+  <div class="container">
+    <div class="row g-4 text-center">
+
+      <!-- STUDENTS -->
+      <div class="col-md-3 col-6">
+        <div class="stats-card-ui">
+          <div class="stats-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+
+          <div class="stats-number" appCountUp [count]="155248"></div>
+          <h6>Students</h6>
+        </div>
+      </div>
+
+      <!-- FUNCTIONAL -->
+      <div class="col-md-3 col-6">
+        <div class="stats-card-ui">
+          <div class="stats-icon">
+            <i class="bi bi-building-check"></i>
+          </div>
+
+          <div class="stats-number" appCountUp [count]="499"></div>
+          <h6>Functional EMRS</h6>
+        </div>
+      </div>
+
+      <!-- LOCATIONS -->
+      <div class="col-md-3 col-6">
+        <div class="stats-card-ui">
+          <div class="stats-icon">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+
+          <div class="stats-number" appCountUp [count]="723"></div>
+          <h6>Locations</h6>
+        </div>
+      </div>
+
+      <!-- SANCTIONED -->
+      <div class="col-md-3 col-6">
+        <div class="stats-card-ui">
+          <div class="stats-icon">
+            <i class="bi bi-patch-check-fill"></i>
+          </div>
+
+          <div class="stats-number" appCountUp [count]="728"></div>
+          <h6>Sanctioned EMRS</h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="home-info-section py-4">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- LEFT : WHAT'S NEW -->
+      <div class="col-lg-6 col-md-12">
+        <div class="stats-card">  <!-- reuse your card style -->
+
+          <div class="info-header mb-2">
+            <span class="badge bg-primary p-2">WHAT'S NEW</span>
+          </div>
+
+          <div class="notification-scroll">
+            <div class="scroll-track" #track>
+              <ul class="notification-list">
+                <li>Holidays to be observed in EMRS during 2026 – reg. <span class="new-badge">NEW</span></li>
+                <li>Revised guidelines for Biometric Attendance System in EMRS <span class="new-badge">NEW</span></li>
+                <li>Vacation Schedule for EMRSs 2026-27 – reg. <span class="new-badge">NEW</span></li>
+                <li>ESSE-2025 Tier-I Examination – OMR Answer Sheet download</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-end mt-2">
+            <a class="text-primary fw-semibold">View All »</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT : YOUR EXISTING STATS (UNCHANGED) -->
+      <div class="col-lg-6 col-md-12">
+  <div class="stats-main-box">
+
+    <div class="stats-inner">
+
+      <div class="mini-stat">
+        <i class="bi bi-people-fill"></i>
+        <div class="stats-number" appCountUp [count]="155248"></div>
+        <p>Students</p>
+      </div>
+
+      <div class="mini-stat">
+        <i class="bi bi-building-check"></i>
+        <div class="stats-number" appCountUp [count]="499"></div>
+        <p>Functional EMRS</p>
+      </div>
+
+      <div class="mini-stat">
+        <i class="bi bi-geo-alt-fill"></i>
+        <div class="stats-number" appCountUp [count]="723"></div>
+        <p>Locations Approved</p>
+      </div>
+
+      <div class="mini-stat">
+        <i class="bi bi-patch-check-fill"></i>
+        <div class="stats-number" appCountUp [count]="728"></div>
+        <p>Sanctioned EMRS</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>

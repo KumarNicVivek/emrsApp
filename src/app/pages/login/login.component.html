@@ -1,0 +1,65 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <!-- Username -->
+  <div class="mb-3">
+    <input
+      type="text"
+      formControlName="email"
+      class="form-control"
+      placeholder="Username" />
+  </div>
+
+  <!-- Password -->
+  <div class="mb-3">
+    <div class="input-group">
+      <input
+        [type]="showPassword ? 'text' : 'password'"
+        formControlName="password"
+        class="form-control"
+        placeholder="Password" />
+
+      <span class="input-group-text" (click)="togglePassword()">
+        <i class="bi" [ngClass]="showPassword ? 'bi-eye' : 'bi-eye-slash'"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- Captcha -->
+  <div class="mb-3">
+    <div class="d-flex align-items-center">
+      <img
+        [src]="captchaImageUrl"
+        alt="Captcha"
+        class="captcha-img" />
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-sm ms-2"
+        (click)="refreshCaptcha()">
+        <i class="bi bi-arrow-clockwise"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Captcha Input -->
+  <div class="mb-3">
+    <input
+      type="text"
+      formControlName="captchaInput"
+      class="form-control"
+      placeholder="Enter Captcha" />
+  </div>
+
+  <!-- Submit Button -->
+  <div class="d-grid">
+    <button type="submit" class="btn btn-emrs">
+      <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+    </button>
+  </div>
+
+  <!-- Forgot Password -->
+  <div class="forgot-password">
+  <a routerLink="/forgot-password">Forgot Password?</a>
+</div>
+
+</form>
