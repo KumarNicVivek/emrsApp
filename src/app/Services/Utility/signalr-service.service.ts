@@ -18,7 +18,7 @@ export class SignalrServiceService {
     }
 
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:5100/visitorHub', {
+      .withUrl('https://emrswebapp-azatf4h9e3a6gfcs.canadacentral-01.azurewebsites.net/visitorHub', {
         withCredentials:true //
       }) // Update with your SignalR hub URL
       .withAutomaticReconnect()
