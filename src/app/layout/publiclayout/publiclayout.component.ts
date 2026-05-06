@@ -14,7 +14,9 @@ import { SignalrServiceService } from '../../Services/Utility/signalr-service.se
 })
 export class PubliclayoutComponent implements OnInit {
 
-  private apiUrl = environment.candidateapibaseUrl + '/api/Visitor';
+  //private apiUrl = environment.candidateapibaseUrl + '/api/Visitor';
+
+  private apiUrl = environment.AzureApiBaseUrl + '/api/Visitor';
   totalVisitors: number = 0;
 
   constructor(private http: HttpClient,private signalRService: SignalrServiceService) { }
